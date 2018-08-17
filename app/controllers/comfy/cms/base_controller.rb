@@ -8,6 +8,10 @@ class Comfy::Cms::BaseController < ComfortableMexicanSofa.config.public_base_con
 
 protected
 
+  def verify_authenticity_token
+    true
+  end
+
   def load_cms_site
     @cms_site ||=
       if params[:site_id]
